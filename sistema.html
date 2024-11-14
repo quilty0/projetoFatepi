@@ -1,11 +1,50 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Sistema de Gerenciamento de Processos</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <h1>Teste</h1>
+    <div class="menu-bar">
+        <div class="menu-item" id="processos">
+            <span>Processos</span>
+        </div>
+        <div class="menu-item"><span>Cadastro</span></div>
+        <div class="menu-item" id="relatorio"><span>Relatório</span></div>
+        <div class="menu-item"><span>Manutenção</span></div>
+        <div class="menu-item"><span>Principal</span></div>
+        <div class="menu-item"><span>Sair</span></div>
+    </div>
+    <div id="relatorio-submenu" class="submenu">
+        <div class="submenu-item">Locais</div>
+        <div class="submenu-item">Etiquetas</div>
+        <div class="submenu-item">Usuários</div>
+        <div class="submenu-item">Processos no Local</div>
+        <div class="submenu-item">Resumo de Processos</div>
+        <div class="submenu-item">Produtividade</div>
+        <div class="submenu-item">Produtividade Analítico</div>
+        <div class="submenu-item">Resumo Tramitação</div>
+        <div class="submenu-item">Tramitação por Local</div>
+    </div>
+    <div id="processos-submenu" class="submenu">
+        <div class="submenu-item">
+            <span>Abertura</span>
+        </div>
+        <div class="submenu-item" id="tramitacao">
+            <span>Tramitação</span>
+        </div>
+        <div class="submenu-item">
+            <span>Manutenção</span>
+        </div>
+        <div class="submenu-item">
+            <span>Administração</span>
+        </div>
+    </div>
+
+   
+
+    <script src="sistema.js"></script>
 </body>
 </html>

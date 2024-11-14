@@ -1,101 +1,61 @@
-@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap');
-
 body {
-    font-family: 'Nunito', sans-serif;
-    background-color: #f4f7f9;
+    font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
+    background-color: rgb(255, 255, 255); 
+
+.menu-bar {
     display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
+    background-color:  #FFA500;
+    padding: 0;
 }
 
-.content-wrapper {
-    background-color: #fff;
-    padding: 30px;
-    border-radius: 10px;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-    max-width: 400px;
-    width: 100%;
-}
-
-.logo-login {
-    display: block;
-    margin: 0 auto 20px;
-    width: 100px;
-    height: auto;
-}
-
-.form-group {
-    position: relative;
-    margin-bottom: 20px;
-}
-
-.form-group input {
-    width: 85%;
-    padding: 15px 15px 15px 45px;
-    border-radius: 5px;
-    border: 1px solid #ccc;
-    font-size: 16px;
-    color: #333;
-    outline: none;
-    transition: all 0.3s ease;
-}
-
-.form-group input:focus {
-    border-color: #007bff;
-    box-shadow: 0 0 10px rgba(0, 123, 255, 0.2);
-}
-
-.form-group svg {
-    position: absolute;
-    top: 50%;
-    left: 15px;
-    transform: translateY(-50%);
-    fill: #007bff;
-    width: 20px;
-    height: 20px;
-}
-
-.btn {
-    width: 100%;
-    padding: 15px;
-    background-color: #007bff;
-    border: none;
-    border-radius: 5px;
-    color: #fff;
-    font-size: 18px;
+.menu-item {
+    padding: 10px 70px;
+    background-color:  #FFA500;
     cursor: pointer;
-    transition: background-color 0.3s ease;
+    border: 1px solid  #FFA500;
 }
 
-.btn:hover {
-    background-color: #0056b3;
+.menu-item:hover {
+    background-color: #baeb35;
 }
 
-.senha-link {
-    margin-top: 15px;
-    text-align: center;
-}
-
-.senha-link a {
-    color: #007bff;
-    text-decoration: none;
-    font-weight: 700;
-}
-
-.senha-link a:hover {
-    text-decoration: underline;
-}
-
-.alert {
-    background-color: #fff3cd;
-    color: #856404;
-    padding: 10px;
-    border: 1px solid #ffeeba;
-    border-radius: 5px;
-    text-align: center;
+.submenu {
     display: none;
-    margin-top: 10px;
+    position: absolute;
+    background-color: #4682B4;
+    border: 1px solid #CCCCCC;
+    z-index: 1000;
+    width: 200px;
+}
+
+.submenu-item {
+    padding: 10px;
+    color: white;
+    cursor: pointer;
+    border-bottom: 1px solid #CCCCCC;
+}
+
+.submenu-item:hover {
+    background-color: #5F9EA0;
+}
+
+#processos-submenu {
+    top: 41px;
+    left: 0;
+}
+
+
+}#relatorio-submenu {
+    top: 41px;
+    left: 425px; /* Adjust this value based on the position of the Relatório button */
+    width: 270px; /* Wider to accommodate longer text */
+}
+
+#relatorio-submenu .submenu-item {
+    padding: 10px;
+    color: white;
+    cursor: pointer;
+    border-bottom: 1px solid #CCCCCC;
 }
