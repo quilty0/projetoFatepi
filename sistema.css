@@ -1,0 +1,61 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: rgb(255, 255, 255); 
+
+.menu-bar {
+    display: flex;
+    background-color:  #FFA500;
+    padding: 0;
+}
+
+.menu-item {
+    padding: 10px 70px;
+    background-color:  #FFA500;
+    cursor: pointer;
+    border: 1px solid  #FFA500;
+}
+
+.menu-item:hover {
+    background-color: #baeb35;
+}
+
+.submenu {
+    display: none;
+    position: absolute;
+    background-color: #4682B4;
+    border: 1px solid #CCCCCC;
+    z-index: 1000;
+    width: 200px;
+}
+
+.submenu-item {
+    padding: 10px;
+    color: white;
+    cursor: pointer;
+    border-bottom: 1px solid #CCCCCC;
+}
+
+.submenu-item:hover {
+    background-color: #5F9EA0;
+}
+
+#processos-submenu {
+    top: 41px;
+    left: 0;
+}
+
+
+}#relatorio-submenu {
+    top: 41px;
+    left: 425px; /* Adjust this value based on the position of the Relatório button */
+    width: 270px; /* Wider to accommodate longer text */
+}
+
+#relatorio-submenu .submenu-item {
+    padding: 10px;
+    color: white;
+    cursor: pointer;
+    border-bottom: 1px solid #CCCCCC;
+}
