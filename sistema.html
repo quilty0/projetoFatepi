@@ -42,8 +42,78 @@
             <span>Administração</span>
         </div>
     </div>
+    
+    <form>
+        <div class="form">
+            <label class="label ">Processo:</label>
+            <div class="processo-input">
+                <input type="text" maxlength="2" size="2" class="processo-part">
+                <span>-</span>
+                <input type="text" maxlength="1" size="1" class="processo-part">
+                <span>/</span>
+                <input type="text" maxlength="4" size="4" class="processo-part">
+            </div>
+        </div>
 
-   
+        <div class="form">
+            <label class="label ">Interessado:</label>
+            <input type="text" name="interessado">
+        </div>
+
+        <div class="form">
+            <label class="label ">Tipo:</label>
+            <select name="tipo">
+                <option value="">-- Selecione Tipo de Processo --</option>
+            </select>
+        </div>
+
+        <div class="form">
+            <label class="label ">Documentação:</label>
+            <select name="documentacao">
+                <option value="">Documentação A Validar</option>
+            </select>
+        </div>
+
+        <div class="form">
+            <label class="label ">Natureza:</label>
+            <select name="natureza">
+                <option value="">SOLICITAÇÃO</option>
+            </select>
+        </div>
+
+        <div class="form">
+            <label class="label ">Assunto:</label>
+            <input type="text" name="assunto">
+        </div>
+
+        <div class="form">
+            <label class="label ">Qtde de Folhas:</label>
+            <input type="number" name="qtdFolhas">
+        </div>
+
+        <div class="form">
+            <label class="label ">Situação:</label>
+            <select name="situacao">
+                <option value="">-- Selecione Tipo de Situação --</option>
+            </select>
+        </div>
+
+        <div class="form">
+            <label class="label ">Local Destino:</label>
+            <select name="localDestino">
+                <option value="">-- Selecione Local Destino Interno --</option>
+            </select>
+        </div>
+
+        <div class="form">
+            <label class="label">Observação:</label>
+        </div>
+        <textarea name="observacao"></textarea>
+
+        <div class="button-row">
+            <button type="submit">Confirma</button>
+        </div>
+    </form>
 
     <script src="sistema.js"></script>
 </body>

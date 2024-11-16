@@ -99,3 +99,13 @@ body {
     display: none;
     margin-top: 10px;
 }
+
+
+#processo{
+ display: none;
+ text-align: center;
+}
+.desgraça{
+    background-color: blue;
+    color: #007bff;
+}
