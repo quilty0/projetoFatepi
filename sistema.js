@@ -36,3 +36,18 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 
+// Seleciona elementos do DOM
+const processosMenu = document.getElementById('processos');
+const processosSubmenu = document.getElementById('processos-submenu');
+const aberturaMenuItem = document.getElementById('abertura');
+const formulario = document.getElementById('formulario');
+
+
+
+    // Exibe o formulário ao clicar em "Abertura"
+    formulario.addEventListener('click', () => {
+    // Esconde o submenu de processos
+    processosSubmenu.style.display = 'none';
+    
+  
+});

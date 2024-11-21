@@ -17,20 +17,11 @@
         <div class="menu-item"><span>Principal</span></div>
         <div class="menu-item"><span>Sair</span></div>
     </div>
-    <div id="relatorio-submenu" class="submenu">
-        <div class="submenu-item">Locais</div>
-        <div class="submenu-item">Etiquetas</div>
-        <div class="submenu-item">Usuários</div>
-        <div class="submenu-item">Processos no Local</div>
-        <div class="submenu-item">Resumo de Processos</div>
-        <div class="submenu-item">Produtividade</div>
-        <div class="submenu-item">Produtividade Analítico</div>
-        <div class="submenu-item">Resumo Tramitação</div>
-        <div class="submenu-item">Tramitação por Local</div>
-    </div>
+
+    <!-- Submenu de Processos -->
     <div id="processos-submenu" class="submenu">
-        <div class="submenu-item">
-            <span>Abertura</span>
+        <div class="submenu-item" id="abertura">
+           <span> <a href="asunto.html"> Abertura></a> </span>
         </div>
         <div class="submenu-item" id="tramitacao">
             <span>Tramitação</span>
@@ -42,10 +33,11 @@
             <span>Administração</span>
         </div>
     </div>
-    
-    <form>
+
+    <!-- Formulário escondido inicialmente -->
+    <form id="formulario" class="formulario escondido">
         <div class="form">
-            <label class="label ">Processo:</label>
+            <label class="label">Processo:</label>
             <div class="processo-input">
                 <input type="text" maxlength="2" size="2" class="processo-part">
                 <span>-</span>
@@ -56,61 +48,23 @@
         </div>
 
         <div class="form">
-            <label class="label ">Interessado:</label>
+            <label class="label">Interessado:</label>
             <input type="text" name="interessado">
         </div>
 
         <div class="form">
-            <label class="label ">Tipo:</label>
+            <label class="label">Tipo:</label>
             <select name="tipo">
                 <option value="">-- Selecione Tipo de Processo --</option>
             </select>
         </div>
 
         <div class="form">
-            <label class="label ">Documentação:</label>
-            <select name="documentacao">
-                <option value="">Documentação A Validar</option>
-            </select>
-        </div>
-
-        <div class="form">
-            <label class="label ">Natureza:</label>
-            <select name="natureza">
-                <option value="">SOLICITAÇÃO</option>
-            </select>
-        </div>
-
-        <div class="form">
-            <label class="label ">Assunto:</label>
-            <input type="text" name="assunto">
-        </div>
-
-        <div class="form">
-            <label class="label ">Qtde de Folhas:</label>
-            <input type="number" name="qtdFolhas">
-        </div>
-
-        <div class="form">
-            <label class="label ">Situação:</label>
-            <select name="situacao">
-                <option value="">-- Selecione Tipo de Situação --</option>
-            </select>
-        </div>
-
-        <div class="form">
-            <label class="label ">Local Destino:</label>
-            <select name="localDestino">
-                <option value="">-- Selecione Local Destino Interno --</option>
-            </select>
-        </div>
-
-        <div class="form">
             <label class="label">Observação:</label>
+            <textarea name="observacao"></textarea>
         </div>
-        <textarea name="observacao"></textarea>
 
-        <div class="button-row">
+        <div class="form">
             <button type="submit">Confirma</button>
         </div>
     </form>
