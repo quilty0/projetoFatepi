@@ -69,7 +69,7 @@
                         <span class="icon">⏳</span>
                     </div>
                     <div class="card-content">
-                        <div class="number">0</div>
+                        <div class="number">2</div>
                         <p class="description">Processos aguardando análise</p>
                     </div>
                 </div>
@@ -97,6 +97,50 @@
                 </div>
             </div>
         </div>
+        <div id="processos-em-andamento" class="processos-view" style="display: none;">
+            <div class="processos-header">
+                <h1>Processos em Andamento</h1>
+                <button class="novo-processo-btn">Novo Processo</button>
+            </div>
+            
+            <div class="table-container">
+                <table class="processos-table">
+                    <thead>
+                        <tr>
+                            <th>Protocolo</th>
+                            <th>Tipo</th>
+                            <th>Assunto</th>
+                            <th>Status</th>
+                            <th>Data de Abertura</th>
+                            <th>Requerente</th>
+                            <th>Ações</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>PROT-001</td>
+                            <td>Acadêmico</td>
+                            <td>Solicitação de Matrícula</td>
+                            <td><span class="status em-analise">Em Análise</span></td>
+                            <td>25/12/2024</td>
+                            <td>Ewandro</td>
+                            <td><button class="visualizar-btn">Visualizar</button></td>
+                        </tr>
+                        <tr>
+                            <td>PROT-002</td>
+                            <td>Financeiro</td>
+                            <td>Revisão de Mensalidade</td>
+                            <td><span class="status pendente">Pendente</span></td>
+                            <td>26/12/2024</td>
+                            <td>Manuel</td>
+                            <td><button class="visualizar-btn">Visualizar</button></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        
+        
     </main>
 
     <script src="sistema.js"></script>
