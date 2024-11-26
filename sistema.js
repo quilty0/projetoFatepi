@@ -1,53 +1,70 @@
 document.addEventListener('DOMContentLoaded', function() {
-    const processosButton = document.getElementById('processos');
-    const processosSubmenu = document.getElementById('processos-submenu');
-    const tramitacaoItem = document.getElementById('tramitacao');
-    const tramitacaoSubmenu = document.getElementById('tramitacao-submenu');
-    const relatorioButton = document.getElementById('relatorio');
-    const relatorioSubmenu = document.getElementById('relatorio-submenu');
+    // Adiciona funcionalidade para dispositivos móveis
+    const navItems = document.querySelectorAll('.nav-item');
+    const dashboard = document.getElementById('dashboard');
+    const menuPrincipal = document.getElementById('menu-principal');
 
-    processosButton.addEventListener('click', function() {
-        processosSubmenu.style.display = processosSubmenu.style.display === 'block' ? 'none' : 'block';
-        tramitacaoSubmenu.style.display = 'none';
-        relatorioSubmenu.style.display = 'none';
+    // Esconde o dashboard inicialmente
+    dashboard.style.display = 'none';
+
+    navItems.forEach(item => {
+        const link = item.querySelector('.nav-link');
+        
+        link.addEventListener('click', function(e) {
+            // Apenas previne o comportamento padrão se tiver submenu
+            if (item.querySelector('.dropdown-menu')) {
+                e.preventDefault();
+                
+                // Em dispositivos móveis
+                if (window.innerWidth <= 768) {
+                    // Remove active de todos os outros itens
+                    navItems.forEach(otherItem => {
+                        if (otherItem !== item) {
+                            otherItem.classList.remove('active');
+                        }
+                    });
+                    
+                    // Toggle active no item clicado
+                    item.classList.toggle('active');
+                }
+            }
+        });
     });
 
-    tramitacaoItem.addEventListener('mouseover', function() {
-        tramitacaoSubmenu.style.display = 'block';
+    // Adiciona funcionalidade ao menu Principal
+    menuPrincipal.addEventListener('click', function(e) {
+        e.preventDefault();
+        dashboard.style.display = 'block';
+        
+        // Adiciona classe active ao item do menu
+        navItems.forEach(item => {
+            item.classList.remove('active');
+        });
+        this.parentElement.classList.add('active');
     });
 
-    tramitacaoItem.addEventListener('mouseout', function() {
-        tramitacaoSubmenu.style.display = 'none';
-    });
-
-    relatorioButton.addEventListener('click', function() {
-        relatorioSubmenu.style.display = relatorioSubmenu.style.display === 'block' ? 'none' : 'block';
-        processosSubmenu.style.display = 'none';
-        tramitacaoSubmenu.style.display = 'none';
-    });
-
-    document.addEventListener('click', function(event) {
-        if (!processosButton.contains(event.target) && !processosSubmenu.contains(event.target) &&
-            !relatorioButton.contains(event.target) && !relatorioSubmenu.contains(event.target)) {
-            processosSubmenu.style.display = 'none';
-            tramitacaoSubmenu.style.display = 'none';
-            relatorioSubmenu.style.display = 'none';
+    // Fecha os menus quando clicar fora
+    document.addEventListener('click', function(e) {
+        if (!e.target.closest('.nav-item')) {
+            navItems.forEach(item => {
+                item.classList.remove('active');
+            });
         }
     });
-});
 
-// Seleciona elementos do DOM
-const processosMenu = document.getElementById('processos');
-const processosSubmenu = document.getElementById('processos-submenu');
-const aberturaMenuItem = document.getElementById('abertura');
-const formulario = document.getElementById('formulario');
+    // Ajusta os menus ao redimensionar a janela
+    window.addEventListener('resize', function() {
+        if (window.innerWidth > 768) {
+            navItems.forEach(item => {
+                item.classList.remove('active');
+            });
+        }
+    });
 
-
-
-    // Exibe o formulário ao clicar em "Abertura"
-    formulario.addEventListener('click', () => {
-    // Esconde o submenu de processos
-    processosSubmenu.style.display = 'none';
-    
-  
+    // Adiciona funcionalidade ao botão de criar processo
+    const createButton = document.querySelector('.create-button');
+    createButton.addEventListener('click', function() {
+        alert('Iniciando criação de novo processo...');
+        // Aqui você pode adicionar a lógica para abrir um formulário ou redirecionar
+    });
 });

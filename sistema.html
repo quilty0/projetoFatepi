@@ -3,71 +3,101 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sistema de Gerenciamento de Processos</title>
+    <title>Sistema de Processos</title>
     <link rel="stylesheet" href="sistema.css">
 </head>
 <body>
-    <div class="menu-bar">
-        <div class="menu-item" id="processos">
-            <span>Processos</span>
+    <header class="header">
+        <div class="logo">
+            <span class="logo-part1">FATEPI</span>
+            <span class="logo-part2">FAESPI</span>
         </div>
-        <div class="menu-item"><span>Cadastro</span></div>
-        <div class="menu-item" id="relatorio"><span>Relatório</span></div>
-        <div class="menu-item"><span>Manutenção</span></div>
-        <div class="menu-item"><span>Principal</span></div>
-        <div class="menu-item"><span>Sair</span></div>
-    </div>
+        <nav class="nav">
+            <ul class="nav-list">
+                <li class="nav-item">
+                    <a href="#" class="nav-link">Processos <span class="dropdown-arrow">▼</span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">Novo Processo</a></li>
+                        <li><a href="#">Em Andamento</a></li>
+                        <li><a href="#">Arquivados</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link">Cadastro <span class="dropdown-arrow">▼</span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">Novo Cadastro</a></li>
+                        <li><a href="#">Consultar</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link">Relatório <span class="dropdown-arrow">▼</span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">Gerar Relatório</a></li>
+                        <li><a href="#">Histórico</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link">Manutenção <span class="dropdown-arrow">▼</span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">Configurações</a></li>
+                        <li><a href="#">Backup</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link" id="menu-principal">Principal</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
 
-    <!-- Submenu de Processos -->
-    <div id="processos-submenu" class="submenu">
-        <div class="submenu-item" id="abertura">
-           <span> <a href="asunto.html"> Abertura></a> </span>
-        </div>
-        <div class="submenu-item" id="tramitacao">
-            <span>Tramitação</span>
-        </div>
-        <div class="submenu-item">
-            <span>Manutenção</span>
-        </div>
-        <div class="submenu-item">
-            <span>Administração</span>
-        </div>
-    </div>
+    <main class="content">
+        <div id="dashboard" class="dashboard">
+            <h1>Bem-vindo ao Sistema de Processos</h1>
+            
+            <div class="cards">
+                <div class="card new-process">
+                    <div class="card-header">
+                        <h2>Novo Processo</h2>
+                        <span class="icon">+</span>
+                    </div>
+                    <button class="create-button">Criar Processo</button>
+                </div>
 
-    <!-- Formulário escondido inicialmente -->
-    <form id="formulario" class="formulario escondido">
-        <div class="form">
-            <label class="label">Processo:</label>
-            <div class="processo-input">
-                <input type="text" maxlength="2" size="2" class="processo-part">
-                <span>-</span>
-                <input type="text" maxlength="1" size="1" class="processo-part">
-                <span>/</span>
-                <input type="text" maxlength="4" size="4" class="processo-part">
+                <div class="card">
+                    <div class="card-header">
+                        <h2>Em Andamento</h2>
+                        <span class="icon">⏳</span>
+                    </div>
+                    <div class="card-content">
+                        <div class="number">0</div>
+                        <p class="description">Processos aguardando análise</p>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-header">
+                        <h2>Aprovados</h2>
+                        <span class="icon">✓</span>
+                    </div>
+                    <div class="card-content">
+                        <div class="number">0</div>
+                        <p class="description">Processos concluídos este mês</p>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-header">
+                        <h2>Arquivados</h2>
+                        <span class="icon">📁</span>
+                    </div>
+                    <div class="card-content">
+                        <div class="number">0</div>
+                        <p class="description">Total de processos arquivados</p>
+                    </div>
+                </div>
             </div>
         </div>
-
-        <div class="form">
-            <label class="label">Interessado:</label>
-            <input type="text" name="interessado">
-        </div>
-
-        <div class="form">
-            <label class="label">Tipo:</label>
-            <select name="tipo">
-                <option value="">-- Selecione Tipo de Processo --</option>
-            </select>
-        </div>
-
-        <div class="form">
-            <label class="label">Observação:</label>
-            <textarea name="observacao"></textarea>
-        </div>
-
-        <div class="form">
-            <button type="submit">Confirma</button>
-        </div>
-    </form>
+    </main>
 
     <script src="sistema.js"></script>
 </body>
