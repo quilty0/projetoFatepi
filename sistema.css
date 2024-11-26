@@ -296,4 +296,91 @@ body {
         padding: 0.75rem;
     }
 }
+.criar-processo {
+    max-width: 600px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.criar-processo h1 {
+    margin-bottom: 1.5rem;
+    color: #333;
+}
+
+.form-criar-processo .form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-criar-processo label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+    color: #555;
+}
+
+.form-criar-processo input[type="text"],
+.form-criar-processo input[type="date"],
+.form-criar-processo select,
+.form-criar-processo textarea {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
+.form-criar-processo textarea {
+    resize: vertical;
+}
+
+.form-criar-processo input[type="file"] {
+    border: 1px solid #ddd;
+    padding: 0.5rem;
+    border-radius: 4px;
+}
+
+.form-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 1rem;
+}
+
+.btn-submit,
+.btn-cancel {
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 4px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.btn-submit {
+    background-color: #1a73e8;
+    color: white;
+}
+
+.btn-submit:hover {
+    background-color: #1557b0;
+}
+
+.btn-cancel {
+    background-color: #f1f3f4;
+    color: #3c4043;
+}
+
+.btn-cancel:hover {
+    background-color: #e8eaed;
+}
+
+@media (max-width: 768px) {
+    .criar-processo {
+        padding: 1.5rem;
+    }
+}
+
+
 

@@ -17,8 +17,8 @@
                 <li class="nav-item">
                     <a href="#" class="nav-link">Processos <span class="dropdown-arrow">▼</span></a>
                     <ul class="dropdown-menu">
-                        <li><a href="#">Novo Processo</a></li>
-                        <li><a href="#">Em Andamento</a></li>
+                        <li><a href="#" id="novo-processo-menu">Novo Processo</a></li>
+                        <li><a href="#" id="processos-menu">Processos em Andamento</a></li>
                         <li><a href="#">Arquivados</a></li>
                     </ul>
                 </li>
@@ -44,7 +44,7 @@
                     </ul>
                 </li>
                 <li class="nav-item">
-                    <a href="#" class="nav-link" id="menu-principal">Principal</a>
+                    <a href="#" class="nav-link" id="principal-menu">Principal</a>
                 </li>
             </ul>
         </nav>
@@ -139,8 +139,44 @@
                 </table>
             </div>
         </div>
-        
-        
+        <div id="criar-processo" class="criar-processo" style="display: none;">
+            <h1>Criar Novo Processo</h1>
+            <form id="form-criar-processo" class="form-criar-processo">
+                <div class="form-group">
+                    <label for="tipo-processo">Tipo de Processo:</label>
+                    <select id="tipo-processo" name="tipo-processo" required>
+                        <option value="">Selecione o tipo</option>
+                        <option value="academico">Acadêmico</option>
+                        <option value="financeiro">Financeiro</option>
+                        <option value="administrativo">Administrativo</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="assunto">Assunto:</label>
+                    <input type="text" id="assunto" name="assunto" required>
+                </div>
+                <div class="form-group">
+                    <label for="requerente">Requerente:</label>
+                    <input type="text" id="requerente" name="requerente" required>
+                </div>
+                <div class="form-group">
+                    <label for="descricao">Descrição:</label>
+                    <textarea id="descricao" name="descricao" rows="4" required></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="data-abertura">Data de Abertura:</label>
+                    <input type="date" id="data-abertura" name="data-abertura" required>
+                </div>
+                <div class="form-group">
+                    <label for="documentos">Anexar Documentos:</label>
+                    <input type="file" id="documentos" name="documentos" multiple>
+                </div>
+                <div class="form-actions">
+                    <button type="submit" class="btn-submit">Criar Processo</button>
+                    <button type="button" class="btn-cancel">Cancelar</button>
+                </div>
+            </form>
+        </div>
     </main>
 
     <script src="sistema.js"></script>
